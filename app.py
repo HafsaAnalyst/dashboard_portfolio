@@ -1,5 +1,5 @@
 """
-The Migration — Unified Analytics Dashboard  (Portfolio / Demo build)
+The Marketing Performance — Unified Analytics Dashboard  (Portfolio / Demo build)
 =====================================================================
 
 A self-contained Streamlit dashboard that recreates a real analytics product
@@ -24,7 +24,7 @@ import streamlit as st
 from sample_data import build_data
 
 st.set_page_config(
-    page_title="The Migration — Analytics Dashboard",
+    page_title="The Marketing Performance — Analytics Dashboard",
     page_icon="📊",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -124,7 +124,7 @@ with st.container(border=True):
     with hc[0]:
         st.markdown(
             '<div style="font-size:21px;font-weight:700;color:#1e3a5f;">'
-            'The Migration — Unified Analytics Dashboard</div>'
+            'The Marketing Performance — Unified Analytics Dashboard</div>'
             '<div style="font-size:12px;color:#8a8f96;margin-top:3px;">'
             'Live data from GHL · Meta Ads · GA4 · GSC · Updated 2 mins ago</div>',
             unsafe_allow_html=True)
@@ -875,6 +875,6 @@ with tabs[6]:
 
 st.markdown(
     '<div style="text-align:center;color:#9aa0a6;font-size:12px;margin-top:16px;">'
-    'The Migration · Demo Dashboard · Built with Streamlit · Python · All data simulated · '
+    'The Marketing Performance · Demo Dashboard · Built with Streamlit · Python · All data simulated · '
     'Data sources: GHL · Meta Ads · GA4 · GSC</div>',
     unsafe_allow_html=True)
