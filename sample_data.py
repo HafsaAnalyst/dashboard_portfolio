@@ -34,7 +34,7 @@ HISTORY_DAYS = 150  # how far back the simulated history runs
 
 SEED = 42
 
-CITIES = ["Melbourne", "Sydney", "Others", "Unidentified"]
+CITIES = ["Perth", "Sydney", "Brisbane", "Unidentified"]
 CITY_WEIGHTS = [0.42, 0.40, 0.13, 0.05]
 
 SOURCES = ["Meta Paid", "Organic / SEO", "Chatbot", "Referral", "Other"]
@@ -51,20 +51,20 @@ PIPELINES = ["Visa", "Education"]
 PIPELINE_WEIGHTS = [0.55, 0.45]
 
 VISA_TYPES = [
-    "485 Visa", "PR Pathway", "Student Visa", "Partner Visa",
+    "Parent Visa", "PR Pathway", "Student Visa", "Partner Visa",
     "Nursing PR", "Master Course", "Diploma",
 ]
 
 CAMPAIGNS = [
     # (name, account, base_daily_spend, cpl_bias)
-    ("PR-Pathway-IT-Mel",      "Melbourne", 195, 0.85),
-    ("485-Visa-Extension-Syd", "Sydney",    164, 0.90),
+    ("PR-Pathway-IT-Perth",      "Perth", 195, 0.85),
+    ("Parent-Visa-Extension-Bris", "Brisbane",    164, 0.90),
     ("Education-Diploma-Mel",  "Melbourne", 140, 1.05),
     ("Partner-Visa-Combined",  "Both",      129, 1.05),
     ("PR-Pathway-Nursing-Syd", "Sydney",    118, 1.08),
     ("Master-Course-Mel",      "Melbourne",  94, 1.15),
     ("Visa-Ext-Mel-V3",        "Melbourne",  71, 2.70),
-    ("TR-to-PR-Combined",      "Both",       37, 0.70),
+    ("TR-to-PR-Combined",      "All",       37, 0.70),
 ]
 
 # ---------------------------------------------------------------------
@@ -73,23 +73,23 @@ CAMPAIGNS = [
 # ---------------------------------------------------------------------
 COUNSELLOR_BASE = [
     # name,            short,       type,          city,        slots, booked, showed, convert
-    ("Nasir Nawaz",    "Nasir N.",  "Paid · RMA",  "Sydney",    48,  42, 34, 14),
-    ("Gurbir Singh",   "Gurbir S.", "Paid · MARA", "Melbourne", 56,  49, 38, 15),
-    ("Syed Turab Raza","Turab R.",  "Paid",        "Sydney",    72,  54, 40, 14),
-    ("Wajahat Ghafoor","Wajahat G.","Free · TL",   "Sydney",    96,  71, 48, 12),
-    ("Saurab Gautam",  "Saurab G.", "Free",        "Sydney",    80,  54, 39, 10),
-    ("Kajal Garg",     "Kajal G.",  "Free",        "Sydney",    80,  52, 37,  9),
-    ("Navneet Kaur",   "Navneet K.","Free · Mel",  "Melbourne", 72,  44, 30,  8),
-    ("Manhal Dandachi","Manhal D.", "Free · Admin","Sydney",    56,  34, 23,  4),
+    ("Alex",    "Alex",  "Paid · RMA",  "Sydney",    48,  42, 34, 14),
+    ("Liam",   "Liam", "Paid · MARA", "Melbourne", 56,  49, 38, 15),
+    ("Noah", "Noah",  "Paid",        "Sydney",    72,  54, 40, 14),
+    ("William","Will","Free · TL",   "Sydney",    96,  71, 48, 12),
+    ("Jacob",  "Jacob", "Free",        "Sydney",    80,  54, 39, 10),
+    ("Ahmad",     "Ahmad",  "Free",        "Sydney",    80,  52, 37,  9),
+    ("Keren",   "Keren","Free · Mel",  "Melbourne", 72,  44, 30,  8),
+    ("Man hwa","Manhwa", "Free · Admin","Sydney",    56,  34, 23,  4),
 ]
 
 # Heatmap — leads dropping off per counsellor, per pipeline stage (~30 days).
 HEATMAP_BASE = [
     # counsellor, Booked, Showed, Initial Req., Paid, COE
-    ("Nasir N.",   42, 34, 22, 18, 14),
-    ("Gurbir S.",  49, 38, 24, 19, 15),
-    ("Wajahat G.", 71, 48, 22, 15, 12),
-    ("Manhal D.",  34, 23,  9,  5,  4),
+    ("Liam",   42, 34, 22, 18, 14),
+    ("Noah",  49, 38, 24, 19, 15),
+    ("Jacob", 71, 48, 22, 15, 12),
+    ("Ahmad.",  34, 23,  9,  5,  4),
     ("Others",    236,166,101, 64, 44),
 ]
 
@@ -104,13 +104,13 @@ SEO_BASE = {
 }
 
 TOP_PAGES = [
-    ("/485-visa-guide",          4820, 38),
+    ("/parent-visa-guide",          4820, 38),
     ("/pr-pathway-it",           3940, 31),
     ("/student-visa-extension",  3210, 24),
     ("/partner-visa-australia",  2870, 22),
     ("/coe-vs-voe-explained",    2540, 18),
     ("/nursing-pr-pathway",      2180, 16),
-    ("/melbourne-visa-services", 1920, 14),
+    ("/perth-visa-services", 1920, 14),
 ]
 
 TOP_QUERIES = [
@@ -120,7 +120,7 @@ TOP_QUERIES = [
     ("partner visa australia cost",538, 11.3),
     ("coe certificate enrolment", 484, 5.6),
     ("student visa renewal sydney",421, 9.2),
-    ("mara agent harris park",    398, 3.4),
+    ("mara agent",    398, 3.4),
 ]
 
 LOSS_REASONS = [
